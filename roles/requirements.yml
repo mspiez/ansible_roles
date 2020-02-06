@@ -1,0 +1,6 @@
+# from galaxy
+- src: yatesr.timezone
+
+# from GitHub
+- src: https://github.com/mspiez/ansible_role_1.git
+#- src: https://github.com/mspiez/ansible_role_2.git
