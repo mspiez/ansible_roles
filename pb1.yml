@@ -1,0 +1,19 @@
+---
+- name: "TEST"
+  hosts: "localhost"
+  gather_facts: "no"
+  connection: "local"
+
+  tasks:
+
+    - name: "INSTALL ROLES"
+      command: "ansible-galaxy install -r roles/requirements.yml --roles-path roles"
+      delegate_to: "localhost"
+
+    - name: "DEBUG"
+      debug:
+        msg: "Hello World!"
+
+    - name: "INCLUDE ROLE 1"
+      include_role:
+        name: "ansible_role_1"
